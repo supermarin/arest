@@ -27,6 +27,8 @@ class HttpController < ApplicationController
 	private
 
 	def render_params
+		params.delete(:controller)
+		params[:method] = params.delete(:action).upcase
 		render :json => params
 	end
 
