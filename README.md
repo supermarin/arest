@@ -16,12 +16,15 @@ Let's assume we're using [POW](https://github.com/37signals/pow/), so my app is 
 (main)> BW::HTTP.get('http://bw.dev?nick=mneorr') { |response| p BW::JSON.parse(response.body) }
 # =>  {"method"=>"GET", "nick"=>"mneorr"}
 
-(main)> BW::HTTP.get('http://bw.dev', payload: { nick: 'mneorr'}) { |response| p BW::JSON.parse(response.body) }
-# =>  {"method"=>"GET", "nick"=>"mneorr"}
+
+main)> user = { name: 'marin', twitter: '@mneorr', followers: ['John', 'Mark', 'Ive'] }
+# => {:name=>"marin", :twitter=>"@mneorr", :followers=>["John", "Mark", "Ive"]}
+(main)> BW::HTTP.get('http://bw.dev', payload: user) { |response| p BW::JSON.parse(response.body) }
+# =>  {"name"=>"marin", "twitter"=>"@mneorr", "followers"=>["John", "Mark", "Ive"], "method"=>"GET"}
 
 ```
 
 
 #### TODO
 
-Authentications, recirects
+Authentications, redirects
