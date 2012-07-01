@@ -5,7 +5,7 @@ class HttpController < ApplicationController
 	end
 
 	def post
-		render :json => params
+		render_params
 	end
 
 	def put
