@@ -6,7 +6,7 @@ Once you're done hacking, your specs are passing, you can confirm it all works p
 Just hit the root url with the desired HTTP method (GET,POST,DELETE,..) and you should get the parameters passed in back in JSON.
 
 ### Example
-Let's assume we're using [POW](https://github.com/37signals/pow/), so my app is located at ``` bwhttp.dev ```
+Let's assume we're using [POW](https://github.com/37signals/pow/), so my app is located at ``` bw.dev ```
 
 ``` ruby
 
