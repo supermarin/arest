@@ -7,5 +7,4 @@ BWHttp::Application.routes.draw do
   put '/:format/' => 'http#put'
   delete '/:format/' => 'http#delete'
   # 'http' => 'http#patch' # Can't get this working
-
 end
