@@ -27,9 +27,19 @@ class HttpController < ApplicationController
 	private
 
 	def render_params
+		prepare_output
+		respond_to do |wants|
+			wants.json { render :json => @output }
+			wants.xml { render :xml => @output }
+		end
+	end
+
+	def prepare_output
 		params.delete(:controller)
-		params[:method] = params.delete(:action).upcase
-		render :json => params
+		params.delete(:format)
+		@output = {}
+		@output[:method] = params.delete(:action).upcase
+		@output[:params] = params
 	end
 
 end
