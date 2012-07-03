@@ -7,6 +7,7 @@ gem 'rails', '3.2.6'
 
 group :development, :test do
 	gem 'sqlite3'
+  gem 'guard-livereload'
 end
 
 group :production, :staging do

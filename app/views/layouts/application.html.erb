@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BWHttp</title>
+  <title>REST debug server by Marin Usalj | @mneorr</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<div class="header">(awesome) REST debug server</div>
+	
+	<div class="mainContainer">
+		<%= yield %>
+	</div>
+
+	<div class="footer">Brought to you by <a href="http://mneorr.com">@mneorr</a></div>
 
 </body>
 </html>

@@ -1,0 +1,22 @@
+<% sample_params='name=marin&surname=usalj&twitter=@mneorr.com&sample_array[]=one&sample_array[]=two&sample_array[]=three' %>
+
+<p class="subtitle">Logs out all the params you send/upload to the server.</p>
+
+<div class="descriptionContainer">
+
+	<p class='usage'>
+		Confirm what you're sending to the server.<br>
+		Useful for Mobile developers or anybody who's connecting with a web service.<br><br><br>
+		Supports GET, POST, PUT, HEAD, DELETE, and files upload.
+	</p>
+
+	<p class="usage"><br>
+		JSON - <a href="http://log.mneorr.com/json">http://log.mneorr.com/json</a><br>
+		XML - <a href="http://log.mneorr.com/xml">http://log.mneorr.com/xml</a>
+	</p>
+	<p class="usage">[GET] SAMPLES:
+		<a href='/json?<%= sample_params %>'>JSON</a>
+		<a href='/xml?<%= sample_params %>'>XML</a>
+	</p>
+
+</div>
