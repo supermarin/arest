@@ -1,12 +1,14 @@
 # A(wesome) REST debug server
 
-This is a simple application made for testing the HTTP requests.
+This is a simple application made for testing the HTTP requests. <br>
 Confirm what you're sending from a mobile device to a web server.
+<br>
 
-Just hit the server with the desired HTTP method (GET,POST,DELETE,..) and you should get the parameters passed in back in JSON or XML.
+Hit the server like you would hit the production one, and you should get the parameters passed in back in JSON or XML. <br>
+Supported HTTP methods: GET, POST, DELETE, PUT, HEAD. 
 
 ### Example
-GET - [JSON](http://log.mneorr.com/json?name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three)
+GET - [JSON](http://log.mneorr.com/json?name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three) <br>
 GET - [XML](http://log.mneorr.com/xml?name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three)
 
 
