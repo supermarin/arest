@@ -16,18 +16,18 @@ For instance, I've used this one to test the BubbleWrap HTTP library.
 
 ``` ruby
 
-(main)> BW::HTTP.post('http://log.mneorr.com/json', payload: { name: 'marin'}) { |response| p response.body.to_str }
-# =>  "{\"method\":\"POST\",\"params\":{\"name\":\"marin\"}}"
+(main)> BW::HTTP.post('http://log.mneorr.com/json', payload: { name: 'marin'}) { |response| puts response.body.to_str }
+=>  {"method":"POST","params":{"name":"marin"}}
 
-(main)> BW::HTTP.get('http://log.mneorr.com/json?nick=mneorr') { |response| p response.body.to_str }
-# =>  "{\"method\":\"GET\",\"params\":{\"nick\":\"mneorr\"}}"
+(main)> BW::HTTP.get('http://log.mneorr.com/json?nick=mneorr') { |response| puts response.body.to_str }
+=>  {"method":"GET","params":{"nick":"mneorr"}}
 
 
 (main)> user = { name: 'marin', twitter: '@mneorr', followers: ['John', 'Mark', 'Ive'] }
-# => {:name=>"marin", :twitter=>"@mneorr", :followers=>["John", "Mark", "Ive"]}
+=> {:name=>"marin", :twitter=>"@mneorr", :followers=>["John", "Mark", "Ive"]}
 
-(main)> BW::HTTP.get('http://log.mneorr.com/json', payload: user) { |response| p BW::JSON.parse(response.body) }
-# =>  {"name"=>"marin", "twitter"=>"@mneorr", "followers"=>["John", "Mark", "Ive"], "method"=>"GET"}
+(main)> BW::HTTP.put('http://log.mneorr.com/json', payload: user) { |response| puts BW::JSON.parse(response.body) }
+=>  {"method"=>"PUT", "params"=>{"followers"=>"[\"John\", \"Mark\", \"Ive\"]", "name"=>"marin", "twitter"=>"@mneorr"}}
 
 ```
 
