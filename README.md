@@ -8,8 +8,8 @@ Hit the server like you would hit the production one, and you should get the par
 Supported HTTP methods: GET, POST, DELETE, PUT, HEAD. 
 
 ### Example
-GET - [JSON](http://log.mneorr.com/json?name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three) <br>
-GET - [XML](http://log.mneorr.com/xml?name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three)
+GET - [JSON](http://arest.us/json?name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three) <br>
+GET - [XML](http://arest.us/xml?name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three)
 
 
 For instance, I've used this one to test the BubbleWrap HTTP library.

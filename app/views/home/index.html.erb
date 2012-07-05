@@ -1,4 +1,5 @@
 <% sample_params='name=marin&surname=usalj&twitter=@mneorr&sample_array[]=one&sample_array[]=two&sample_array[]=three' %>
+<% base_url='http://arest.us' %>
 
 <p class="subtitle">Logs out all the params you send/upload to the server.</p>
 
@@ -11,8 +12,8 @@
 	</p>
 
 	<p class="usage"><br>
-		JSON - <a href="http://log.mneorr.com/json">http://log.mneorr.com/json</a><br>
-		XML - <a href="http://log.mneorr.com/xml">http://log.mneorr.com/xml</a>
+		JSON - <a href="<%= base_url %>/json"><%= base_url %>/json</a><br>
+		XML - <a href="<%= base_url %>/xml"><%= base_url %>/xml</a>
 	</p>
 	<p class="usage">[GET] SAMPLES:
 		<a href='/json?<%= sample_params %>'>JSON</a>
