@@ -1,28 +1,13 @@
 class HttpController < ApplicationController
 
-  def get
+  def redirect
+    redirect_to :action => :process_request
+  end
+
+  def process_request
     render_params
   end
 
-  def post
-    render_params
-  end
-
-  def put
-    render_params
-  end
-
-  def head
-    render_params
-  end
-
-  def patch
-    render_params
-  end
-
-  def delete
-    render_params
-  end
 
   private
 
@@ -37,9 +22,12 @@ class HttpController < ApplicationController
   def prepare_output
     params.delete(:controller)
     params.delete(:format)
+    params.delete(:action)
+
     @output = {}
-    @output[:method] = params.delete(:action).upcase
     @output[:params] = params
+    @output[:method] = request.method
+    @output[:headers] = request.headers.select {|k,v| k.match("^HTTP.*")}
   end
 
 end
